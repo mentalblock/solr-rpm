@@ -12,3 +12,4 @@ java.util.logging.FileHandler.formatter = java.util.logging.SimpleFormatter
 java.util.logging.FileHandler.pattern = /var/log/solr/solr.log
 java.util.logging.FileHandler.limit = 52428800
 java.util.logging.FileHandler.count = 4
+java.util.logging.FileHandler.append = true
