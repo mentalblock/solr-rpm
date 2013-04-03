@@ -7,7 +7,7 @@ Name:		solr
 Version:	%{ver}
 Release:	1.0
 Summary:	Apache Search Server
-Source:		apache-solr-%{version}.tgz
+Source:		solr-%{version}.tgz
 Source1:	solr.init.in
 Source2:	solr.sysconfig.in
 Source3:	solr.logging.properties.in
@@ -15,7 +15,7 @@ URL:		http://lucene.apache.org/solr/
 Group:		Development/Tools/Building
 License:	Apache License, Version 2.0
 BuildRoot:	%{_tmppath}/build-%{name}-%{version}
-PreReq:		/usr/sbin/groupadd /usr/sbin/useradd
+Requires:		/usr/sbin/groupadd /usr/sbin/useradd
 BuildArch:	noarch
 
 %description
@@ -29,7 +29,7 @@ Solr is a standalone enterprise search server with a REST-like API.
 %install
 rm -rf "%{buildroot}"
 %__install -d "%{buildroot}%{workdir}"
-cp -Rp apache-solr-%{version}/* "%{buildroot}%{workdir}"
+cp -Rp solr-%{version}/* "%{buildroot}%{workdir}"
 %__install -D -m0755 "%{SOURCE3}" "%{buildroot}%{workdir}/example/logging.properties"
 
 %__install -d "%{buildroot}/var/log/solr"
