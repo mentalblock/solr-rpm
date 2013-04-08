@@ -29,7 +29,7 @@ SOLR_STOP_PORT=8079
 SOLR_STOP_KEY="${SOLR_HOME}/stopkey"
 
 # Java options for Solr
-OPTIONS="-Xmx1024m -DSTOP.PORT=$SOLR_STOP_PORT -Djava.util.logging.config.file=logging.properties"
+OPTIONS="-Xmx1024m -DSTOP.PORT=$SOLR_STOP_PORT -Djava.util.logging.config.file=etc/logging.properties"
 
 # Path to pid file
 PIDFILE=/var/run/solr.pid

@@ -10,7 +10,6 @@ Summary:	Apache Search Server
 Source:		solr-%{version}.tgz
 Source1:	solr.init.in
 Source2:	solr.sysconfig.in
-Source3:	solr.logging.properties.in
 URL:		http://lucene.apache.org/solr/
 Group:		Development/Tools/Building
 License:	Apache License, Version 2.0
@@ -30,7 +29,6 @@ Solr is a standalone enterprise search server with a REST-like API.
 rm -rf "%{buildroot}"
 %__install -d "%{buildroot}%{workdir}"
 cp -Rp solr-%{version}/* "%{buildroot}%{workdir}"
-%__install -D -m0755 "%{SOURCE3}" "%{buildroot}%{workdir}/example/logging.properties"
 
 %__install -d "%{buildroot}/var/log/solr"
 
