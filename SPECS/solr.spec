@@ -5,7 +5,7 @@
 
 Name:		solr
 Version:	%{ver}
-Release:	1.0
+Release:	%{rel}
 Summary:	Apache Search Server
 Source:		solr-%{version}.tgz
 Source1:	solr.init.in
