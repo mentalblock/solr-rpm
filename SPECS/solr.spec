@@ -39,7 +39,7 @@ cp -Rp solr-%{version}/* "%{buildroot}%{workdir}"
 %__sed -i 's,@@HOME@@,%{workdir},g' "%{buildroot}/etc/sysconfig/solr"
 
 SOURCE3_FILE=`basename %{SOURCE3}`
-%__install -D -m0755 "%{SOURCE3}" "%{buildroot}%{workdir}/contrib/jdbc/lib/${SOURCE3_FILE}"
+%__install -D -m0755 "%{SOURCE3}" %"%{buildroot}%{workdir}/example/solr/lib/${SOURCE3_FILE}"
 
 %pre
 /usr/sbin/groupadd -r solr &>/dev/null || :
