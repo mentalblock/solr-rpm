@@ -13,23 +13,20 @@
 # License: http://creativecommons.org/licenses/by/3.0/
 #-----------------------------------------------------
 
-# User under which solr is executed
-SOLR_USER=solr
+# The hostname in the context of Solr
+SOLR_HOSTNAME="@@HOSTNAME@@"
 
 # Directory where solr is installed
 SOLR_HOME="@@HOME@@"
 
-# Directory from which solr is execute
-SOLR_RUNDIR="${SOLR_HOME}/example"
+# Solr Listen Port
+SOLR_PORT=8983
 
-# Solr Stop Port
-SOLR_STOP_PORT=8079
+# Solr JVM memory allocation
+SOLR_MEMORY="1g"
 
-# Stop Key
-SOLR_STOP_KEY="${SOLR_HOME}/stopkey"
+# Solr Zookeeper String
+SOLR_ZK_STRING="127.0.0.1:2181"
 
 # Java options for Solr
-OPTIONS="-Xmx1024m -DSTOP.PORT=$SOLR_STOP_PORT -Djava.util.logging.config.file=etc/logging.properties"
-
-# Path to pid file
-PIDFILE=/var/run/solr.pid
+SOLR_JVM_OPTS="-Dsolr.autoSoftCommit.maxTime=3000"

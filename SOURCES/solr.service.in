@@ -1,0 +1,14 @@
+[Unit]
+Description=Apache Solr
+After=syslog.target network.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/sysconfig/solr
+User=solr
+ExecStart=@@PKG_ROOT@@/bin/solr start -noprompt -h ${SOLR_HOSTNAME} -p ${SOLR_PORT} -z ${SOLR_ZK_STRING} -m ${SOLR_MEMORY} -a "${SOLR_JVM_OPTS}"
+ExecStop=@@PKG_ROOT@@/bin/solr stop
+LimitNOFILE=10000
+
+[Install]
+WantedBy=multi-user.target
