@@ -14,6 +14,7 @@ Summary:        Apache Search Server
 Source:         solr-%{version}.tgz
 Source1:        solr.service.in
 Source2:        solr.sysconfig.in
+Source3:        solr.in.sh.in
 URL:            http://lucene.apache.org/solr/
 Group:          Development/Tools/Building
 License:        Apache License, Version 2.0
@@ -37,6 +38,7 @@ cp -Rp solr-%{version}/* "%{buildroot}%{workdir}"
 %__install -D -m0755 "%{SOURCE1}" "%{buildroot}%{start_script_path}"
 
 %__install -D -m0600 "%{SOURCE2}" "%{buildroot}/etc/sysconfig/solr"
+%__install -D -m0600 "%{SOURCE3}" "%{buildroot}%{workdir}/bin/solr.in.sh"
 %__sed -i 's,@@HOME@@,%{workdir}/server/solr,g' "%{buildroot}/etc/sysconfig/solr"
 %__sed -i 's,@@PKG_ROOT@@,%{workdir},g' "%{buildroot}%{start_script_path}"
 %__sed -i "s,@@HOSTNAME@@,`hostname`,g" "%{buildroot}/etc/sysconfig/solr"

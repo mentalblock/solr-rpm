@@ -12,6 +12,10 @@
 # Author: Jeff Busby <jeff@jeffbusby.ca>
 # License: http://creativecommons.org/licenses/by/3.0/
 #-----------------------------------------------------
+#
+
+# Set the JAVA_HOME for Solr
+#SOLR_JAVA_HOME="/usr/lib/jvm/jre-1.8.0"
 
 # The hostname in the context of Solr
 SOLR_HOSTNAME="@@HOSTNAME@@"
