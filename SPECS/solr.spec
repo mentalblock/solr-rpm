@@ -19,7 +19,7 @@ URL:            http://lucene.apache.org/solr/
 Group:          Development/Tools/Building
 License:        Apache License, Version 2.0
 BuildRoot:      %{_tmppath}/build-%{name}-%{version}
-Requires:       /usr/sbin/groupadd, /usr/sbin/useradd, systemd, java-headless >= 1:1.7.0
+Requires:       /usr/sbin/groupadd, /usr/sbin/useradd, systemd, java-headless >= 1:1.8.0
 BuildArch:      noarch
 
 %description
