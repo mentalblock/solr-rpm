@@ -9,7 +9,7 @@ This work is based off of the build process of
 ## Usage
 
 * Download the tarball for Apache Solr and place it in the `SOURCES` directory. 
-* Execute the build script with the version number of Solr as a parameter.
+* Execute the build script with the version number of Solr and the release number as parameters.
 
 ## Bugs
 
