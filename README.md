@@ -1,3 +1,5 @@
+WARNING: This project is unmaintained as I no longer regularly work with Solr. Feel free to fork it as others have. I hope this project will save you time and effort with your Solr deployments.
+
 ## Solr RPM build files
 
 These files facilitate the build of Apache Solr RPMs.
